@@ -27,6 +27,56 @@ app.get('/info', (req, res) => {
         autor: 'Vitor Souza'
     });
 });
+// 1. Criar uma lista para salvar os produtos (em memória)
+let produtos = [];
+
+// 2. Criar a rota POST que o Postman está tentando acessar
+app.post('/api/produtos', (req, res) => {
+    const { nome, preco, categoria } = req.body;
+
+    const novoProduto = {
+        id: produtos.length + 1,
+        nome,
+        preco,
+        categoria,
+        createdAt: new Date().toISOString()
+    };
+
+    produtos.push(novoProduto);
+
+    // Retorna status 201 (Criado) e o produto em formato JSON
+    res.status(201).json(novoProduto);
+});
+// --- TAREFA 1: Endpoint /api/me ---
+app.get('/api/me', (req, res) => {
+    res.json({
+        nome: "Vitor Souza", // Altere para o seu nome real
+        curso: "Engenharia de Software",
+        hobbies: ["Andar de Moto", "jogar", "Assistir Corrida"],
+        linguagens: ["JavaScript", "Python"]
+    });
+});
+
+// --- TAREFA 2: Novos Endpoints ---
+
+// Retorna data/hora atual
+app.get('/api/data', (req, res) => {
+    res.json({ 
+        data_atual: new Date().toLocaleDateString(),
+        hora_atual: new Date().toLocaleTimeString(),
+        iso: new Date().toISOString()
+    });
+});
+
+// Retorna número aleatório (entre 1 e 100)
+app.get('/api/random', (req, res) => {
+    const numero = Math.floor(Math.random() * 100) + 1;
+    res.json({ 
+        numero_aleatorio: numero,
+        min: 1,
+        max: 100
+    });
+});
 
 // 7. Iniciar servidor
 app.listen(PORT, () => {
