@@ -75,7 +75,7 @@ Regra de Negócio (Preço Positivo): Não é permitido cadastrar produtos com pr
 Consistência de Dados (String): O campo nome deve possuir no mínimo 3 caracteres para evitar nomes inválidos ou vazios.
 
   Exemplos de Testes no Postman
-✅ Requisição de Sucesso (POST 201)
+ Requisição de Sucesso (POST 201)
 Ao enviar um JSON válido, a API processa os dados e incrementa o proximoId.
 
 URL: POST /api/produtos
