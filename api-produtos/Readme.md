@@ -10,7 +10,7 @@ Inicie o servidor: node index.js.
 
 A API rodará em: http://localhost:3000.
 
-🛠 Tecnologias Utilizadas
+  Tecnologias Utilizadas
 Runtime: Node.js
 
 Framework: Express
