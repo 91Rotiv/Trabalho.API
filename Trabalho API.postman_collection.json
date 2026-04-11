@@ -229,6 +229,71 @@
         "header": []
       },
       "response": []
+    },
+    {
+      "name": "Testando PUT",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"Teclado Mecânico Razer Blackwidow\",\r\n    \"preco\": 850.00,\r\n    \"categoria\": \"Periféricos\",\r\n    \"estoque\": 5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/produtos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "produtos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Testando CATCH",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "GET para testar CATCH",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"Teclado Mecânico Razer Blackwidow\",\r\n    \"preco\": 850.00,\r\n    \"categoria\": \"Periféricos\",\r\n    \"estoque\": 5\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/produtos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "produtos"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
